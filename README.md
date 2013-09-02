@@ -21,30 +21,30 @@ PageDetection.init(config).start();
 
 ## method
 
-### init 'PageDetection.init()'
+### init `PageDetection.init()`
 
  初始化方法，支持链状调用。
 
-### start 'PageDetection.start()'
+### start `PageDetection.start()`
 
  开始计时。
 
-### pause 'PageDetection.pause()'
+### pause `PageDetection.pause()`
 
  计时暂停，不清空当前的时间。
 
-### continue 'PageDetection.continue()'
+### continue `PageDetection.continue()`
 
  从暂停继续，继续计时。
 
-### reset 'PageDetection.reset()'
+### reset `PageDetection.reset()`
 
  重置当前的计时，当页面有交互时，会默认调用该方法。
 
-### cancel 'PageDetection.cancel()'
+### cancel `PageDetection.cancel()`
 
  取消当前的计时。
 
-### getTime 'PageDetection.getTime()'
+### getTime `PageDetection.getTime()`
 
  获取开始到当前已经过的时间。
