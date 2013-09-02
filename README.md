@@ -1,9 +1,8 @@
 #Pagedetection
-=============
-
+----------------
 page detection, will detect how long user put page there, and do not do anything action etc
 
-## Useage
+## Usage
 
 ```js
 PageDetection.init(config).start();
