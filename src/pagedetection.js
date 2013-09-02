@@ -59,7 +59,7 @@
 
 				return this;
 			},
-			continue: function(){
+			proceed: function(){
 				if (!this.remain || this.remain <= 0 || this.status !== status.pause) return;
 				_clear();
 				this.start();
@@ -74,7 +74,7 @@
 				_clear();
 				this.remain = this.config.timing;
 				this.start();
-				
+
 				return this;
 			},
 			cancel: function(){
