@@ -19,16 +19,6 @@
 
 
 	var PageDetection = {
-		/**
-		 * [init description]
-		 * @param  {[object]} option
-		 * option = {
-		 * 	timing: 10000, // set the waiting time, default is 10000 seconds
-		 * 	onTimeout: function // the callback will be triggerred when the time out;
-		 * 	onPause: function // the callback will be triggerred when pause;
-		 * 	once: false // if "once" is true, it will trigger only one time
-		 * }
-		 */
 		init: function(option){
 			this.config = $.extend({}, _config, option);
 			this.status = status.stop;
@@ -47,6 +37,7 @@
 			this.timer = setTimeout($.proxy(function(){
 				this.config.onTimeout && $.isFunction(this.config.onTimeout) && this.config.onTimeout.call(this);
 				!this.config.once && (this.status === status.run) && this.start();
+				this.remain = this.config.timing;
 			}, this), this.remain);
 
 			return this;
@@ -58,7 +49,7 @@
 			this.remain = this.remain - this.getTime();
 			this.timer && clearTimeout(this.timer);
 		},
-		continues: function(){
+		continue: function(){
 			if (!this.remain || this.remain <= 0 || this.status !== status.pause) return;
 			this.timer && clearTimeout(this.timer);
 			this.start();

@@ -12,10 +12,10 @@
 <script>
 (function(){
 	PageDetection.init({
-		timing: 5000,
+		timing: 3000,
 		onTimeout: function(){
 			console.log("time up", this);
-			this.cancel();
+			// this.cancel();
 		},
 		onPause: function(){
 			console.log(PageDetection.getTime());
