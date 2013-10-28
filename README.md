@@ -32,7 +32,7 @@ PageDetection.init(config).start();
 
  计时暂停，不清空当前的时间。
 
-### proceed `PageDetection.proceed()`
+### resume `PageDetection.resume()`
 
  从暂停继续，继续计时。
 

@@ -59,7 +59,7 @@
 
 				return this;
 			},
-			proceed: function(){
+			resume: function(){
 				if (!this.remain || this.remain <= 0 || this.status !== status.pause) return;
 				_clear();
 				this.start();
